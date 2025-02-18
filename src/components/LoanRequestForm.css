@@ -1,0 +1,179 @@
+/* LoanRequestForm.css */
+.loan-request-container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .loan-request-container h2 {
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-size: 26px;
+  }
+  
+  .hero-section {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 6px;
+    margin-bottom: 2rem;
+  }
+  
+  .hero-section h3 {
+    color: #3498db;
+    margin-bottom: 1rem;
+    font-size: 18px;
+  }
+  
+  .hero-section ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-section ul li {
+    padding: 0.5rem 0;
+    color: #555;
+  }
+  
+  .hero-section p {
+    color: #777;
+    font-style: italic;
+  }
+  
+  .loan-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .loan-form label {
+    font-weight: 600;
+    color: #444;
+  }
+  
+  .loan-form input,
+  .loan-form select {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .loan-form input:focus,
+  .loan-form select:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.25);
+  }
+  
+  .repayment-box {
+    background-color: #e8f5fe;
+    padding: 1rem;
+    border-radius: 6px;
+    margin-top: 0.5rem;
+  }
+  
+  .repayment-box h4 {
+    color: #2980b9;
+    text-align: center;
+    margin: 0;
+    font-size: 18px;
+  }
+  
+  .loan-form button {
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 1rem;
+  }
+  
+  .loan-form button:hover:not(:disabled) {
+    background-color: #27ae60;
+  }
+  
+  .loan-form button:disabled {
+    background-color: #95a5a6;
+    cursor: not-allowed;
+  }
+  
+  /* Loan History Section */
+  .loan-history {
+    margin-top: 3rem;
+  }
+  
+  .loan-history h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 22px;
+  }
+  
+  .loan-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .loan-card {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 6px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .loan-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .loan-card h4 {
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
+  
+  .loan-card p {
+    color: #7f8c8d;
+    margin: 0.5rem 0;
+  }
+  
+  /* Status-specific styles */
+  .loan-card.pending {
+    border-left: 4px solid #f39c12;
+  }
+  
+  .loan-card.approved {
+    border-left: 4px solid #2ecc71;
+  }
+  
+  .loan-card.rejected {
+    border-left: 4px solid #e74c3c;
+  }
+  
+  .loan-card.completed {
+    border-left: 4px solid #3498db;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .loan-request-container {
+      padding: 1rem;
+      margin: 1rem;
+    }
+    
+    .loan-cards {
+      grid-template-columns: 1fr;
+    }
+  }

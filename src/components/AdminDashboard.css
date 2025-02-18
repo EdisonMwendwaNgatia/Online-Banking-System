@@ -1,0 +1,255 @@
+/* AdminDashboard.css */
+:root {
+    --primary-color: #1a365d;
+    --primary-light: #2c5282;
+    --accent-color: #3182ce;
+    --success-color: #38a169;
+    --warning-color: #dd6b20;
+    --error-color: #e53e3e;
+    --background-color: #f8fafc;
+    --light-bg: #edf2f7;
+    --white: #ffffff;
+    --border-color: #e2e8f0;
+    --text-color: #2d3748;
+    --muted-text: #718096;
+    --box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition-time: 0.3s;
+  }
+  
+  body {
+    font-family: 'Roboto', 'Segoe UI', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  .admin-dashboard {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  header {
+    background-color: var(--white);
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 24px;
+    box-shadow: var(--box-shadow);
+  }
+  
+  nav {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  nav button {
+    background-color: var(--light-bg);
+    color: var(--primary-color);
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition-time);
+  }
+  
+  nav button:hover {
+    background-color: var(--accent-color);
+    color: var(--white);
+  }
+  
+  h2 {
+    color: var(--primary-color);
+    font-size: 28px;
+    margin-bottom: 24px;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 10px;
+  }
+  
+  .user-management,
+  .card-requests,
+  .loan-requests {
+    animation: fadeIn 0.5s ease-out;
+  }
+  
+  /* User Card Styles */
+  .user-card {
+    background-color: var(--white);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 16px;
+    box-shadow: var(--box-shadow);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .user-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .user-card h3 {
+    color: var(--primary-light);
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 18px;
+  }
+  
+  .user-card p {
+    color: var(--text-color);
+    margin-bottom: 12px;
+  }
+  
+  .user-card button {
+    background-color: var(--accent-color);
+    color: var(--white);
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color var(--transition-time);
+  }
+  
+  .user-card button:hover {
+    background-color: var(--primary-light);
+  }
+  
+  .user-card ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 16px;
+    background-color: var(--light-bg);
+    border-radius: 4px;
+    padding: 10px;
+  }
+  
+  .user-card li {
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .user-card li:last-child {
+    border-bottom: none;
+  }
+  
+  /* Card and Loan Request Styles */
+  .card-request,
+  .loan-request {
+    background-color: var(--white);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 16px;
+    box-shadow: var(--box-shadow);
+    position: relative;
+    border-left: 4px solid var(--accent-color);
+  }
+  
+  .card-request h3,
+  .loan-request h3 {
+    color: var(--primary-light);
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 18px;
+  }
+  
+  .card-request p,
+  .loan-request p {
+    margin-bottom: 8px;
+  }
+  
+  .card-request button,
+  .loan-request button {
+    background-color: var(--white);
+    border: 1px solid;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: all var(--transition-time);
+  }
+  
+  .card-request button:first-of-type,
+  .loan-request button:first-of-type {
+    color: var(--success-color);
+    border-color: var(--success-color);
+  }
+  
+  .card-request button:first-of-type:hover,
+  .loan-request button:first-of-type:hover {
+    background-color: var(--success-color);
+    color: var(--white);
+  }
+  
+  .card-request button:last-of-type,
+  .loan-request button:last-of-type {
+    color: var(--error-color);
+    border-color: var(--error-color);
+  }
+  
+  .card-request button:last-of-type:hover,
+  .loan-request button:last-of-type:hover {
+    background-color: var(--error-color);
+    color: var(--white);
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Empty state styling */
+  .card-requests p:only-child,
+  .loan-requests p:only-child,
+  .user-card p:last-child:not(:only-child) {
+    text-align: center;
+    color: var(--muted-text);
+    font-style: italic;
+    padding: 20px;
+  }
+  
+  /* Responsive design */
+  @media (min-width: 768px) {
+    nav {
+      justify-content: flex-start;
+    }
+    
+    .card-requests,
+    .loan-requests {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+    
+    .card-request,
+    .loan-request {
+      margin-bottom: 0;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    nav {
+      flex-direction: column;
+      gap: 8px;
+    }
+    
+    .admin-dashboard {
+      padding: 10px;
+    }
+    
+    h2 {
+      font-size: 24px;
+      text-align: center;
+    }
+  }
