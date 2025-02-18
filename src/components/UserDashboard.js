@@ -417,7 +417,7 @@ const UserDashboard = () => {
         <div>
           <BalanceCard>
             <BalanceTitle>Total Balance</BalanceTitle>
-            <Balance>${totalBalance.toFixed(2)}</Balance>
+            <Balance>KSh {totalBalance.toFixed(2)}</Balance>
             <InputSection>
               <StyledInput
                 type="number"
@@ -440,7 +440,7 @@ const UserDashboard = () => {
                 </AccountIcon>
               </AccountHeader>
               <AccountTitle>Main Account</AccountTitle>
-              <AccountBalance>${mainBalance.toFixed(2)}</AccountBalance>
+              <AccountBalance>KSh {mainBalance.toFixed(2)}</AccountBalance>
               <ActionButtons>
                 <ActionButton onClick={handleWithdraw}>
                   Withdraw
@@ -458,7 +458,7 @@ const UserDashboard = () => {
                 </AccountIcon>
               </AccountHeader>
               <AccountTitle>Savings Account</AccountTitle>
-              <AccountBalance>${savingsBalance.toFixed(2)}</AccountBalance>
+              <AccountBalance>KSh {savingsBalance.toFixed(2)}</AccountBalance>
               <ActionButton onClick={withdrawFromSavings}>
                 Withdraw from Savings
               </ActionButton>
@@ -507,7 +507,7 @@ const UserDashboard = () => {
           <SidebarCard>
             <SectionTitle>Tips & Insights</SectionTitle>
             <p style={{ fontSize: '0.875rem', color: '#6b7280', marginBottom: '1rem' }}>
-              Saving just $50 per week can add up to $2,600 in a year!
+              Saving just KSh 5,000 per week can add up to KSh 260,000 in a year!
             </p>
             <ActionButton style={{ width: '100%' }}>
               View All Tips
@@ -539,7 +539,7 @@ const UserDashboard = () => {
                 </TransactionInfo>
                 <TransactionAmount type={txn.type}>
                   {txn.type.includes('Deposit') || txn.type.includes('Withdraw from Savings') ? 
-                   '+' : '-'}${txn.amount}
+                   '+' : '-'}KSh {txn.amount}
                 </TransactionAmount>
               </TransactionItem>
             ))

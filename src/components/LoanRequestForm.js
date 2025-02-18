@@ -376,7 +376,7 @@ const LoanRequestForm = () => {
 
       <FormContainer>
         <FormGroup>
-          <Label><DollarSign size={18} /> Loan Amount ($):</Label>
+          <Label><DollarSign size={18} /> Loan Amount (Ksh):</Label>
           <Input
             type="number"
             value={loanAmount}
@@ -398,7 +398,7 @@ const LoanRequestForm = () => {
 
         <RepaymentBox>
           <RepaymentAmount>
-            Expected Repayment: <span>${totalRepayment.toFixed(2)}</span>
+            Expected Repayment: <span>Ksh {totalRepayment.toFixed(2)}</span>
           </RepaymentAmount>
         </RepaymentBox>
 
@@ -417,7 +417,7 @@ const LoanRequestForm = () => {
           <LoanCards>
             {loans.map((loan, index) => (
               <LoanCard key={index} status={loan.status}>
-                <LoanAmount><DollarSign size={20} /> ${loan.amount}</LoanAmount>
+                <LoanAmount><DollarSign size={20} /> Ksh {loan.amount}</LoanAmount>
                 <LoanDetail><Calendar size={16} /> Repayment Period: {loan.repaymentPeriod} Months</LoanDetail>
                 {loan.dateRequested && (
                   <LoanDetail><Clock size={16} /> Requested: {formatDate(loan.dateRequested)}</LoanDetail>

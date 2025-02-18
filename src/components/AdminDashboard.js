@@ -461,7 +461,7 @@ const AdminDashboard = () => {
                                 {transaction.description}
                               </TransactionDescription>
                               <TransactionAmount amount={transaction.amount}>
-                                {transaction.amount > 0 ? '+' : ''}${Math.abs(transaction.amount).toFixed(2)}
+                                {transaction.amount > 0 ? '+' : ''}Ksh{Math.abs(transaction.amount).toFixed(2)}
                                 {transaction.amount > 0 ? <ArrowUp size={14} /> : <ArrowDown size={14} />}
                               </TransactionAmount>
                             </TransactionItem>
@@ -539,7 +539,7 @@ const AdminDashboard = () => {
                   <LoanRequestCard key={index}>
                     <CardTitle>
                       <DollarSign size={18} />
-                      Loan Amount: ${loan.amount.toLocaleString()}
+                      Loan Amount: Ksh{loan.amount.toLocaleString()}
                       <Badge type={loan.status === "Pending" ? "warning" : "success"}>
                         {loan.status}
                       </Badge>
@@ -554,7 +554,7 @@ const AdminDashboard = () => {
                     </InfoText>
                     <InfoText>
                       <ArrowRight size={16} />
-                      Monthly Payment: ${(loan.amount / loan.repaymentPeriod).toFixed(2)}
+                      Monthly Payment: Ksh{(loan.amount / loan.repaymentPeriod).toFixed(2)}
                     </InfoText>
                     {loan.purpose && (
                       <InfoText>

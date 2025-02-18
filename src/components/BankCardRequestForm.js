@@ -307,19 +307,19 @@ const BankCardRequestForm = () => {
       type: "Bronze", 
       price: 500, 
       icon: <Shield size={24} />,
-      perks: ["Basic fraud protection", "ATM withdrawals up to $500/day", "24/7 customer support"]
+      perks: ["Basic fraud protection", "ATM withdrawals up to Ksh 50,000/day", "24/7 customer support"]
     },
     { 
       type: "Silver", 
       price: 1000, 
       icon: <Zap size={24} />,
-      perks: ["Enhanced fraud protection", "ATM withdrawals up to $1,000/day", "Purchase protection", "Travel insurance"]
+      perks: ["Enhanced fraud protection", "ATM withdrawals up to Ksh 100,000/day", "Purchase protection", "Travel insurance"]
     },
     { 
       type: "Gold", 
       price: 2000, 
       icon: <Gift size={24} />,
-      perks: ["Premium fraud protection", "ATM withdrawals up to $2,000/day", "Extended warranty", "Cashback rewards", "Priority customer service"]
+      perks: ["Premium fraud protection", "ATM withdrawals up to Ksh 200,000/day", "Extended warranty", "Cashback rewards", "Priority customer service"]
     },
     { 
       type: "Platinum", 
@@ -385,7 +385,7 @@ const BankCardRequestForm = () => {
           <CreditCard size={28} />
           Request a Bank Card
         </PageTitle>
-        <Balance>Current Balance: <BalanceAmount>${mainBalance.toFixed(2)}</BalanceAmount></Balance>
+        <Balance>Current Balance: <BalanceAmount>Ksh {mainBalance.toFixed(2)}</BalanceAmount></Balance>
       </Header>
 
       <CardsGrid>
@@ -402,7 +402,7 @@ const BankCardRequestForm = () => {
               </CardIcon>
               <CardContent>
                 <CardTitle>{card.type} Card</CardTitle>
-                <CardPrice>${card.price.toLocaleString()}</CardPrice>
+                <CardPrice>Ksh {card.price.toLocaleString()}</CardPrice>
                 <PerksList>
                   {card.perks.map((perk, index) => (
                     <PerkItem key={index}>{perk}</PerkItem>
@@ -449,7 +449,7 @@ const BankCardRequestForm = () => {
                   <RequestedCardTitle>{card.cardType} Card</RequestedCardTitle>
                 </RequestedCardHeader>
                 <RequestedCardDetails>
-                  <div>Price: ${card.price.toLocaleString()}</div>
+                  <div>Price: Ksh {card.price.toLocaleString()}</div>
                   <div>Requested on: {new Date(card.dateRequested).toLocaleDateString()}</div>
                   <StatusLabel status={card.status}>
                     {card.status === 'Pending' ? <Clock size={12} /> : card.status === 'Approved' ? <Check size={12} /> : null}
