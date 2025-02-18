@@ -314,6 +314,7 @@ const LoanRequestForm = () => {
     } else {
       setTotalRepayment(0);
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [loanAmount, repaymentPeriod]);
 
   const handleLoanRequest = () => {
